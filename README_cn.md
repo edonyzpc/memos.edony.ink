@@ -1,7 +1,7 @@
 <p align="center"><a href="https://usememos.com"><img height="64px" src="https://raw.githubusercontent.com/eallion/memos.top/main/assets/img/logo-full.webp" alt="✍️ memos" /></a></p>
 
-<p align="center">Memos Top. 通过 Memos API 渲染的静态网页.</p>
-<p align="center">简单的 HTML、纯净的 CSS、原生的 JS。反框架设计。</p>
+<p align="center">Memos Top. 通过 Memos API 渲染的静态网页。</p>
+<p align="center">简单的 HTML、纯净的 CSS、原生的 JS。</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Memos-Top-orange" />
@@ -19,9 +19,13 @@
 
 中文 | [English](./README.md)
 
+> [!NOTE]  
+> 如果你想把你的 Mastodon （长毛象）的嘟文嵌入到自己的网页中，你可以参考这个项目。  
+> <https://github.com/eallion/mastodon-embed-feed-timeline>
+
 ### 前端框架
 
-> • 暗黑模式适配
+> • 暗黑模式适配  
 > • 移动端自适应
 
 - [**Memos**](https://github.com/usememos/memos)
@@ -87,9 +91,15 @@ git clone https://github.com/eallion/memos.top
 5. 按默认设置不用改动，直接点`Deploy`
 6. 中国大陆可能需要绑定一个自定义域名才能访问 Vercel
 
+### 其他平台
+
+你也可以把这个静态页面部署到 Cloudflare Pages 或者 Netlify 等平台。
+
 ### 使用技巧
 
-发布 Memos 时的格式：
+<details><summary>
+发布 Memos 时的格式： 👇👇👇
+</summary>  
 
 1. Bilibili 视频。分享的视频链接。支持`BV/AV`号。暂不支持`b23.tv`链接。
 
@@ -142,7 +152,9 @@ https://book.douban.com/subject/2567698/
 https://movie.douban.com/subject/1889243/
 ```
 
-### [许可证](https://github.com/me-shaon/GLWTPL)
+</details>
+
+### [许可证 GLWTPL](https://github.com/me-shaon/GLWTPL)
 
 ```
 GLWT（Good Luck With That，祝你好运）公共许可证
