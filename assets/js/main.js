@@ -324,7 +324,8 @@ function updateHTMl(data) {
         } else {
             throw new Error('Invalid APIVersion');
         }
-        var comments = data[i].relationList;
+        // new API comments parsing
+        var comments = data[i].relations;
         var commentsLen = comments.length;
         var commentsID = data[i].name;
 
