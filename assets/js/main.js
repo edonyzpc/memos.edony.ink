@@ -102,7 +102,7 @@ function getFirstList() {
 // 预加载下一页数据
 function getNextList() {
     if (memo.APIVersion === 'new') {
-        var memoUrl_next = memoUrl + '&pageSize=' + limit + '&pageToken=' + nextPageToken;
+        var memoUrl_next = memoUrl + '?pageSize=' + limit + '&pageToken=' + nextPageToken;
         fetch(memoUrl_next).then(res => res.json()).then(resdata => {
             nextPageToken = resdata.nextPageToken;
             nextDom = resdata
@@ -118,9 +118,9 @@ function getNextList() {
 
     } else if (memo.APIVersion === 'legacy') {
         if (tag) {
-            var memoUrl_next = memoUrl + "&limit=" + limit + "&offset=" + offset + "&tag=" + tag;
+            var memoUrl_next = memoUrl + "?limit=" + limit + "&offset=" + offset + "&tag=" + tag;
         } else {
-            var memoUrl_next = memoUrl + "&limit=" + limit + "&offset=" + offset;
+            var memoUrl_next = memoUrl + "?limit=" + limit + "&offset=" + offset;
         }
         fetch(memoUrl_next).then(res => res.json()).then(resdata => {
             nextDom = resdata
@@ -180,7 +180,7 @@ function getTagFirstList() {
         nextLength = 0;
         nextDom = '';
         memoDom.innerHTML = "";
-        var memoUrl_tag = memoUrl + "&limit=" + limit + "&tag=" + tag;
+        var memoUrl_tag = memoUrl + "?limit=" + limit + "&tag=" + tag;
         fetch(memoUrl_tag).then(res => res.json()).then(resdata => {
             updateHTMl(resdata);
             var nowLength = resdata.length
