@@ -435,16 +435,18 @@ function getTotal() {
     let totalUrl;
     if (memo.APIVersion === 'new') {
         const filter = `creator=='users/${memo.creatorId}'&&visibilities==['PUBLIC']`;
-        pageUrl = `${memos}/api/v1/memos?pageSize=1&pageToken=`;
+        pageUrl = `${memos}/api/v1/memos?filter='{id:"1","title":"visibilities","filter":"PUBLIC"}'`;
         fetch(pageUrl)
             .then(res => res.json())
             .then(resdata => {
                 if (resdata && resdata.memos) {
+                    /*
                     var pageSize = resdata.memos.map(memo => {
                         const match = memo.name.match(/\d+/);
                         return match ? parseInt(match[0], 10) : null;
                     }).filter(num => num !== null)[0]; // 取第一个匹配到的数字
-
+                    */
+                    let pageSize = resdata.memos.length;
                     if (pageSize) {
                         // 第二次请求：使用获取到的 pageSize
                         totalUrl = `${memos}/api/v1/memos?pageSize=${pageSize}`;
