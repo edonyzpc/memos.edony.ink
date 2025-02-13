@@ -12,7 +12,7 @@ var memo = {
     name: 'Administrator',
     APIVersion: 'new',
     language: 'en',
-    total: true,
+    total: false,
     doubanAPI: '',
 }
 if (typeof (memos) !== "undefined") {
