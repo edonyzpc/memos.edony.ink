@@ -67,7 +67,7 @@ if (memoDom) {
 function getFirstList() {
     let memoUrl_first;
     if (memo.APIVersion === 'new') {
-        memoUrl_first = memoUrl + '&pageSize=' + limit;
+        memoUrl_first = memoUrl + '?pageSize=' + limit;
         fetch(memoUrl_first).then(res => res.json()).then(resdata => {
             updateHTMl(resdata)
             nextPageToken = resdata.nextPageToken;
