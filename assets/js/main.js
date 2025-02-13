@@ -435,7 +435,7 @@ function getTotal() {
     let totalUrl;
     if (memo.APIVersion === 'new') {
         const filter = `creator=='users/${memo.creatorId}'&&visibilities==['PUBLIC']`;
-        pageUrl = `${memos}/api/v1/memos?pageSize=1&pageToken=&&filter=${encodeURIComponent(filter)}`;
+        pageUrl = `${memos}/api/v1/memos?pageSize=1&pageToken=`;
         fetch(pageUrl)
             .then(res => res.json())
             .then(resdata => {
@@ -447,7 +447,7 @@ function getTotal() {
 
                     if (pageSize) {
                         // 第二次请求：使用获取到的 pageSize
-                        totalUrl = `${memos}/api/v1/memos?pageSize=${pageSize}&filter=${encodeURIComponent(filter)}`;
+                        totalUrl = `${memos}/api/v1/memos?pageSize=${pageSize}`;
                         return fetch(totalUrl);
                     } else {
                         throw new Error('No valid pageSize found');
