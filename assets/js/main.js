@@ -28,8 +28,9 @@ var memos = memo.host.replace(/\/$/, '')
 
 let memoUrl;
 if (memo.APIVersion === 'new') {
-    const filter = `creator=='users/${memo.creatorId}'&&visibilities==['PUBLIC']`;
-    memoUrl = `${memos}/api/v1/memos?filter=${encodeURIComponent(filter)}&view=MEMO_VIEW_FULL`;
+    //const filter = `creator=='users/${memo.creatorId}'&&visibilities==['PUBLIC']`;
+    //memoUrl = `${memos}/api/v1/memos?filter=${encodeURIComponent(filter)}&view=MEMO_VIEW_FULL`;
+    memoUrl = `${memos}/api/v1/memos`;
 } else if (memo.APIVersion === 'legacy') {
     memoUrl = memos + "/api/v1/memo?creatorId=" + memo.creatorId + "&rowStatus=NORMAL";
 } else {
